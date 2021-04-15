@@ -1,0 +1,27 @@
+@import './App.scss';
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 10%;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    section {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      a {
+        font-weight: 700;
+        color: $grayish-violet;
+        &:hover {
+          color: $very-dark-violet;
+        }
+      }
+      .pill {
+        padding: 0.5rem 1.5rem;
+        border-radius: 1.5rem;
+      }
+    }
+  }
+}
