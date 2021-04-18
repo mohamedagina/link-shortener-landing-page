@@ -20,8 +20,25 @@
     background-size: cover;
     border-radius: 0.5rem;
     .input-container {
+      position: relative;
       flex-grow: 2;
       margin-left: 6%;
+      &.empty-input {
+        input {
+          border: 3px solid $red;
+          &::placeholder {
+            color: $light-red;
+          }
+        }
+        &::after {
+          content: 'Please add a link';
+          position: absolute;
+          bottom: -2rem;
+          left: 0;
+          color: $red;
+          font-style: italic;
+        }
+      }
       input {
         width: 100%;
         padding: 1rem 2rem;
@@ -36,12 +53,6 @@
           color: $grayish-violet;
         }
       }
-      .empty-input {
-        border: 3px solid $red;
-        &::placeholder {
-          color: $light-red;
-        }
-      }
     }
     button {
       margin-right: 6%;
@@ -52,6 +63,18 @@
       font-size: 18px;
       font-weight: 700;
       border-radius: 0.5rem;
+
+      @keyframes rotation {
+        from {
+          transform: rotateZ(0deg);
+        }
+        to {
+          transform: rotateZ(360deg);
+        }
+      }
+      i {
+        animation: rotation 2s linear infinite;
+      }
     }
   }
 }

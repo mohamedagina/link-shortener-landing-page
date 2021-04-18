@@ -2,10 +2,16 @@ $cyan: hsl(180, 66%, 49%);
 $light-cyan: hsl(177, 56%, 75%);
 $dark-violet: hsl(257, 27%, 26%);
 $red: hsl(0, 87%, 67%);
-$gray: hsl(0, 0%, 75%);
+$light-red: hsl(353, 42%, 80%);
+$gray: hsl(230, 25%, 95%);
 $grayish-violet: hsl(257, 7%, 63%);
 $very-dark-blue: hsl(255, 11%, 22%);
 $very-dark-violet: hsl(260, 8%, 14%);
+
+#App {
+  display: flex;
+  flex-direction: column;
+}
 
 a {
   text-transform: capitalize;
@@ -16,8 +22,11 @@ a {
   height: fit-content;
   background-color: $cyan;
   color: #fff;
-  &:hover {
+  outline: none;
+  &:hover,
+  &:disabled {
     background-color: $light-cyan;
     color: #fff;
+    cursor: pointer;
   }
 }

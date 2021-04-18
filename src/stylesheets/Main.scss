@@ -1,0 +1,79 @@
+@import './App.scss';
+main {
+  position: relative;
+  flex-grow: 2;
+  background-color: $gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  padding: 6rem 10%;
+  .site-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 40%;
+    height: fit-content;
+    .info-heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $very-dark-blue;
+    }
+    p {
+      text-align: center;
+      margin: 0;
+      color: $grayish-violet;
+    }
+  }
+  .info-cards {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    transform: rotateZ(5deg);
+    gap: 2rem;
+    margin: 4rem 0;
+    .info-card {
+      position: relative;
+      transform: rotateZ(-5deg);
+      background-color: #fff;
+      border-radius: 0.5rem;
+      height: auto;
+      padding: 2rem;
+      padding-top: 4.5rem;
+      .info-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        top: -2.5rem;
+        left: 2rem;
+        background-color: $dark-violet;
+        img {
+          width: 2rem;
+        }
+      }
+      .card-heading {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: $very-dark-blue;
+      }
+      p {
+        color: $grayish-violet;
+      }
+    }
+    &::after {
+      content: '';
+      transform: rotateZ(-5deg);
+      width: 90%;
+      position: absolute;
+      top: 40%;
+      left: 5%;
+      z-index: -1;
+      border: 0.25rem solid $cyan;
+    }
+  }
+}

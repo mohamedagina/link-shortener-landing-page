@@ -1,0 +1,54 @@
+@import './App.scss';
+
+footer {
+  width: 80%;
+  padding: 3rem 10%;
+  background-color: $very-dark-violet;
+  display: flex;
+  gap: 20%;
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    flex-grow: 2;
+    gap: 1rem;
+    .links-group {
+      height: fit-content;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      h4 {
+        margin-top: 0;
+        color: #fff;
+      }
+      a {
+        color: $grayish-violet;
+        &:hover {
+          color: $cyan;
+        }
+      }
+    }
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      a {
+        img {
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(285deg)
+            brightness(104%) contrast(105%);
+          &:hover {
+            filter: invert(91%) sepia(85%) saturate(3318%) hue-rotate(124deg)
+              brightness(87%) contrast(84%);
+          }
+        }
+      }
+    }
+  }
+  .logo-container {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
