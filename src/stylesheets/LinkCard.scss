@@ -4,21 +4,20 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   .link-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
     width: 100%;
     padding: 1rem 0;
     background-color: #fff;
     font-size: 18px;
     font-weight: 700;
     border-radius: 0.5rem;
+    margin-bottom: 1rem;
     .full-link {
       color: $very-dark-blue;
-      margin-left: 2rem;
+      margin: 0 2rem;
     }
     span {
       overflow: hidden;
@@ -28,11 +27,12 @@
     .short-link-container {
       width: 60%;
       display: flex;
-      gap: 2rem;
       align-items: center;
+      justify-content: space-between;
       .short-link {
         color: $cyan;
         height: fit-content;
+        margin-right: 1rem;
       }
       button {
         border: 0;
@@ -58,6 +58,7 @@
 
       .full-link {
         margin: 0;
+        margin-bottom: 1rem;
         width: 90%;
         border-bottom: 1px solid $gray;
         padding-bottom: 1rem;
@@ -68,10 +69,11 @@
       }
       .short-link-container {
         flex-direction: column;
-        gap: 2rem;
         width: 100%;
         .short-link {
           width: 90%;
+          margin: 0;
+          margin-bottom: 2rem;
         }
         button {
           margin: 0;
