@@ -1,27 +1,52 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import logo from '../images/logo.svg';
 import { Link } from 'react-router-dom';
 import '../stylesheets/Header.scss';
 import illustration from '../images/illustration-working.svg';
 
 const Header = () => {
+  const toggle = useRef(null);
   return (
     <header>
       <nav>
+        <Link to="/">
+          <img src={logo} alt=""></img>
+        </Link>
         <section className="nav-links">
-          <Link to="/">
-            <img src={logo} alt=""></img>
-          </Link>
-          <Link to="/features">features</Link>
-          <Link to="/pricing">pricing</Link>
-          <Link to="/resources">resources</Link>
+          <section>
+            <Link to="/features">features</Link>
+            <Link to="/pricing">pricing</Link>
+            <Link to="/resources">resources</Link>
+          </section>
+          <section>
+            <Link to="login"> login</Link>
+            <Link className="btn pill" to="signup">
+              sign up
+            </Link>
+          </section>
         </section>
-        <section className="user-area">
-          <Link to="login"> login</Link>
-          <Link className="btn pill" to="signup">
-            sign up
-          </Link>
-        </section>
+        <div className="toggle-menu">
+          <button
+            onClick={() => toggle.current.classList.toggle('show')}
+            type="button"
+            aria-label="toggle menu"
+          >
+            <i className="fas fa-bars fa-2x"></i>
+          </button>
+          <div ref={toggle} className="menu">
+            <section className="links-section">
+              <Link to="/features">features</Link>
+              <Link to="/pricing">pricing</Link>
+              <Link to="/resources">resources</Link>
+            </section>
+            <section>
+              <Link to="login"> login</Link>
+              <Link className="btn pill" to="signup">
+                sign up
+              </Link>
+            </section>
+          </div>
+        </div>
       </nav>
       <section className="header-body">
         <section className="description-container">

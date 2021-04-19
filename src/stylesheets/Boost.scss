@@ -25,3 +25,14 @@
     border-radius: 2rem;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .boost {
+    background-image: url('../images/bg-boost-mobile.svg');
+    background-size: auto;
+    background-position: right top;
+    span {
+      font-size: 1.8rem;
+    }
+  }
+}

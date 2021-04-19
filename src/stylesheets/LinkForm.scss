@@ -78,3 +78,32 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .form-container {
+    .link-form {
+      flex-direction: column;
+      height: fit-content;
+      gap: 3rem;
+      background-image: url('../images/bg-shorten-mobile.svg');
+      background-size: auto;
+      background-position: right top;
+      padding: 1rem 0;
+      .input-container {
+        flex-grow: 1;
+        width: 90%;
+        margin: 0 5.55%;
+
+        input {
+          padding: 1rem 5.55%;
+          width: 90%;
+        }
+      }
+      button {
+        padding: 0.75rem 0;
+        width: 90%;
+        margin: 0 5.55%;
+      }
+    }
+  }
+}

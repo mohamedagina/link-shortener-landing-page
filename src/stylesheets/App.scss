@@ -23,6 +23,7 @@ a {
   background-color: $cyan;
   color: #fff;
   outline: none;
+  white-space: nowrap;
   &:hover,
   &:disabled {
     background-color: $light-cyan;
