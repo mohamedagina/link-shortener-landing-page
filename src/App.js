@@ -7,6 +7,8 @@ import Boost from './components/Boost';
 import Footer from './components/Footer';
 
 function App() {
+  if (!localStorage.getItem('shortLinks'))
+    localStorage.setItem('shortLinks', '[]');
   return (
     <div className="App">
       <Header />

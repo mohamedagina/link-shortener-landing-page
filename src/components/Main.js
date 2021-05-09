@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../stylesheets/Main.scss';
 
 import LinksList from './LinksList';
@@ -11,8 +11,14 @@ import customizable from '../images/icon-fully-customizable.svg';
 
 const Main = () => {
   const [invalid, setInvalid] = useState(false);
-  const [links, setLinks] = useState([]);
+  const [links, setLinks] = useState(
+    JSON.parse(localStorage.getItem('shortLinks'))
+  );
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('shortLinks', JSON.stringify(links));
+  }, [links]);
 
   const infos = [
     {
